@@ -1,5 +1,74 @@
+.font-playfair-normal {
+  font-family: "Playfair Display", serif !important;
+}
+
+.font-playfair-bold {
+  font-family: "Playfair Display", serif !important;
+  font-weight: 700 !important;
+}
+
+.font-raleway-normal {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.font-raleway-bold {
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.color-white {
+  color: white !important;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+.navbar .navbar-brand {
+  font-size: 22px;
+}
+.navbar .navbar-toggler {
+  border: 0;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("../images/hamburger.svg");
+}
+
+.hero-banner {
+  height: 100vh;
+  width: 100%;
+  background: #222222;
+  overflow: hidden;
+}
+.hero-banner img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.6;
 }/*# sourceMappingURL=app.css.map */
