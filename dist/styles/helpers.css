@@ -1,0 +1,21 @@
+.font-playfair-normal {
+  font-family: "Playfair Display", serif !important;
+}
+
+.font-playfair-bold {
+  font-family: "Playfair Display", serif !important;
+  font-weight: 700 !important;
+}
+
+.font-raleway-normal {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.font-raleway-bold {
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.color-white {
+  color: white !important;
+}/*# sourceMappingURL=helpers.css.map */
