@@ -59,16 +59,61 @@ h6 {
   background-image: url("../images/hamburger.svg");
 }
 
-.hero-banner {
+.hero-banner-container {
+  position: relative;
+}
+.hero-banner-container .hero-banner {
   height: 100vh;
   width: 100%;
   background: #222222;
   overflow: hidden;
 }
-.hero-banner img {
+.hero-banner-container .hero-banner img {
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.8;
+}
+.hero-banner-container .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 992px) {
+  .hero-banner-container .hero-text {
+    text-align: left;
+    left: calc(-288px + 50%);
+  }
+}
+@media (min-width: 1200px) {
+  .hero-banner-container .hero-text {
+    left: calc(-375px + 50%);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .hero-banner-container .hero-text {
+    left: calc(-465px + 50%);
+  }
+}
+.hero-banner-container .hero-text h1 {
+  font-size: 60px;
+}
+.hero-banner-container .hero-text p {
+  font-size: 18px;
+}
+.hero-banner-container .hero-text h1,
+.hero-banner-container .hero-text p {
+  text-shadow: 1px 1px 5px #222222;
+}
+.hero-banner-container .hero-text .custom-button {
+  background-color: #ffba00;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0;
+  border: 0;
+  font-size: 18px;
+  color: #222222;
 }/*# sourceMappingURL=app.css.map */
