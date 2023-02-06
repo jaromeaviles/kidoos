@@ -19,6 +19,21 @@
           </div>
       </div>
   </div>
+
+  <!-- About -->
+
+  <section class="container about section-spacer">
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="richtext">
+                <h2 class="font-playfair-bold color-darkgreen">The Most awaited <br>e-commerce event <br>is back!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br>labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+              <img src="dist/images/share-laptop.jpg" alt="Laptop Sharing">
+            </div>
+        </div>
+  </section>
+
 </main>
 
 

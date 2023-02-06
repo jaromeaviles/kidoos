@@ -9,6 +9,7 @@
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
+  color: $raisin-black;
 }
 
 h1,
@@ -27,6 +28,9 @@ h6 {
   width: 100%;
   top: 0;
   z-index: 2;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+
   .navbar-brand {
     font-size: 22px;
   }
@@ -38,6 +42,12 @@ h6 {
   }
   .navbar-toggler-icon {
     background-image: url("../images/hamburger.svg");
+  }
+
+  // Style used when scrolled
+  &.on-scroll {
+    background-color: $raisin-black;
+    opacity: 0.9;
   }
 }
 
@@ -71,7 +81,7 @@ h6 {
     }
 
     @include breakpoint("desktop-large") {
-      left: calc(-375px + 50%);
+      left: calc(-378px + 50%);
     }
 
     @media only screen and (min-width: 1400px) {
@@ -93,5 +103,30 @@ h6 {
     .custom-button {
       @include yellow-btn;
     }
+  }
+}
+
+// About
+
+.about {
+  .richtext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      padding: 0 40px;
+    }
+  }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
   }
 }
