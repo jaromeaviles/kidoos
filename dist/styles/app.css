@@ -21,7 +21,11 @@
 }
 
 .color-darkgreen {
-  color: #0c3b2e;
+  color: #0c3b2e !important;
+}
+
+.bg-darkgreen {
+  background-color: #0c3b2e !important;
 }
 
 .section-spacer {
@@ -151,4 +155,29 @@ h6 {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.sponsors .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sponsors .row > div {
+  padding: 0;
+}
+.sponsors .richtext {
+  padding: 0 40px;
+  color: white;
+}
+.sponsors .richtext h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.sponsors img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
 }/*# sourceMappingURL=app.css.map */

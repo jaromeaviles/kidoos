@@ -34,6 +34,23 @@
         </div>
   </section>
 
+
+  <!-- Our sponsors -->
+
+  <section class="container-fluid sponsors">
+      <div class="row bg-darkgreen">
+        <div class="col-lg-6">
+            <img src="dist/images/kids.jpg" alt="playing">
+          </div>
+          <div class="col-lg-6">
+            <div class="richtext">
+                <h2 class="font-playfair-bold color-white">Our Sponsors</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Minus tempora culpa in reiciendis quam aperiam quo quos<br /> autem expedita ut illo delectus veniam asperiores repellat, nemo aliquid, <br />fugiat corrupti quae.</p>
+            </div>
+          </div>
+      </div>
+  </section>
+
 </main>
 
 
