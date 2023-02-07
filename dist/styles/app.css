@@ -180,4 +180,29 @@ h6 {
      object-fit: cover;
   -o-object-position: right;
      object-position: right;
+}
+
+.testimonials h2 {
+  margin-bottom: 80px;
+}
+.testimonials .testimony .testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.testimonials .testimony .testimonial-header h3 {
+  font-size: 20px;
+  margin-left: 20px;
+}
+.testimonials .testimony .testimonial-header img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+  border-radius: 20px;
+}
+.testimonials .testimony .testimonial-body p {
+  font-size: 14px;
 }/*# sourceMappingURL=app.css.map */

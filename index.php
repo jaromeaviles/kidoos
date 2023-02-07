@@ -51,6 +51,52 @@
       </div>
   </section>
 
+
+  <!-- testimonials -->
+
+  <section class="container testimonials section-spacer">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="font-playfair-bold color-darkgreen text-center">Read what our clients <br/>have to say</h2>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="testimony">
+              <div class="testimonial-header">
+                <img src="dist/images/profile.jpg" alt="profile">
+                <h3>Whelton <br />Insider</h3>
+              </div>
+              <div class="testimonial-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque enim consectetur distinctio libero recusandae atque earum amet sit eum. Provident consequuntur, ab voluptas sit minus dolor quis ut esse repudiandae.</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="testimony">
+              <div class="testimonial-header">
+                <img src="dist/images/profile.jpg" alt="profile">
+                <h3>EchoHex <br />Worldwide</h3>
+              </div>
+              <div class="testimonial-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque enim consectetur distinctio libero recusandae atque earum amet sit eum. Provident consequuntur, ab voluptas sit minus dolor quis ut esse repudiandae.</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="testimony">
+              <div class="testimonial-header">
+                <img src="dist/images/profile.jpg" alt="profile">
+                <h3>Bak <br />Communications</h3>
+              </div>
+              <div class="testimonial-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque enim consectetur distinctio libero recusandae atque earum amet sit eum. Provident consequuntur, ab voluptas sit minus dolor quis ut esse repudiandae.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
 </main>
 
 

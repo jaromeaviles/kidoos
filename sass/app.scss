@@ -158,3 +158,33 @@ h6 {
     object-position: right;
   }
 }
+
+// Testimonials
+.testimonials {
+  h2 {
+    margin-bottom: 80px;
+  }
+  .testimony {
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      h3 {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: right;
+        border-radius: 20px;
+      }
+    }
+    .testimonial-body {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
