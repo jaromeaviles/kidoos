@@ -25,7 +25,13 @@
 }
 
 .color-darkgreen {
-  color: $dark-green;
+  color: $dark-green !important;
+}
+
+// background color
+
+.bg-darkgreen {
+  background-color: $dark-green !important;
 }
 
 // spacing
