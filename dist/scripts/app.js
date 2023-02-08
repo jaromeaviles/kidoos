@@ -3,6 +3,8 @@ let navbar = document.querySelector('.navbar');
 
 // navigation onload
 
+if (window.innerWidth > 991) {
+
 window.onload = () => {
     let position = window.scrollY;
     if (position > 100) {
@@ -21,4 +23,6 @@ window.onscroll = () => {
     } else {
         navbar.classList.remove('on-scroll');
     }
+}
+
 }

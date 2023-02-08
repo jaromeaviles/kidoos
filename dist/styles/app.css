@@ -29,7 +29,7 @@
 }
 
 .section-spacer {
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 
 * {
@@ -53,13 +53,23 @@ h6 {
   font-family: "Playfair Display", serif;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 2;
-  background-color: transparent;
+  background-color: #222222;
+  opacity: 0.9;
   transition: all 0.3s ease-in-out;
+}
+@media (min-width: 992px) {
+  .navbar {
+    background-color: transparent;
+  }
 }
 .navbar .navbar-brand {
   font-size: 22px;
@@ -118,10 +128,25 @@ h6 {
   }
 }
 .hero-banner-container .hero-text h1 {
-  font-size: 60px;
+  font-size: 55px;
+}
+@media (min-width: 768px) {
+  .hero-banner-container .hero-text h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .hero-banner-container .hero-text h1 {
+    font-size: 60px;
+  }
 }
 .hero-banner-container .hero-text p {
-  font-size: 18px;
+  font-size: 22px;
+}
+@media (min-width: 992px) {
+  .hero-banner-container .hero-text p {
+    font-size: 18px;
+  }
 }
 .hero-banner-container .hero-text h1,
 .hero-banner-container .hero-text p {
@@ -143,12 +168,23 @@ h6 {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 40px;
+  text-align: center;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .about .richtext {
+    text-align: left;
+    flex-direction: row;
+  }
 }
 .about .richtext h2 {
   font-size: 40px;
+  margin-bottom: 20px;
 }
-.about .richtext p {
-  padding: 0 40px;
+@media (min-width: 992px) {
+  .about .richtext h2 {
+    margin-bottom: 0;
+  }
 }
 .about img {
   width: 100%;
@@ -157,23 +193,49 @@ h6 {
      object-fit: cover;
 }
 
-.sponsors .row {
+.sponsors .row,
+.contact .row {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.sponsors .row > div {
+@media (min-width: 992px) {
+  .sponsors .row,
+.contact .row {
+    flex-direction: row;
+  }
+}
+.sponsors .row > div,
+.contact .row > div {
   padding: 0;
 }
-.sponsors .richtext {
-  padding: 0 40px;
+.sponsors .richtext,
+.contact .richtext {
+  padding: 40px;
   color: white;
+  text-align: center;
 }
-.sponsors .richtext h2 {
+@media (min-width: 992px) {
+  .sponsors .richtext,
+.contact .richtext {
+    text-align: left;
+    padding: 0 40px;
+  }
+}
+.sponsors .richtext h2,
+.contact .richtext h2 {
   font-size: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-.sponsors img {
+@media (min-width: 992px) {
+  .sponsors .richtext h2,
+.contact .richtext h2 {
+    margin-bottom: 40px;
+  }
+}
+.sponsors img,
+.contact img {
   width: 100%;
   height: 600px;
   -o-object-fit: cover;
@@ -205,4 +267,30 @@ h6 {
 }
 .testimonials .testimony .testimonial-body p {
   font-size: 14px;
+}
+
+.contact .row {
+  flex-direction: row-reverse;
+}
+.contact .richtext {
+  padding: 40px;
+}
+@media (min-width: 992px) {
+  .contact .richtext {
+    padding: 0 0 0 115px;
+  }
+}
+.contact ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.contact .custom-button {
+  background-color: #ffba00;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0;
+  border: 0;
+  font-size: 18px;
+  color: #222222;
+  margin-top: 20px;
 }/*# sourceMappingURL=app.css.map */

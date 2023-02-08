@@ -52,7 +52,7 @@
   </section>
 
 
-  <!-- testimonials -->
+  <!-- Testimonials -->
 
   <section class="container testimonials section-spacer">
       <div class="row">
@@ -74,7 +74,7 @@
         <div class="col-12 col-lg-4">
           <div class="testimony">
               <div class="testimonial-header">
-                <img src="dist/images/profile.jpg" alt="profile">
+                <img src="dist/images/profile2.jpg" alt="profile">
                 <h3>EchoHex <br />Worldwide</h3>
               </div>
               <div class="testimonial-body">
@@ -86,7 +86,7 @@
         <div class="col-12 col-lg-4">
           <div class="testimony">
               <div class="testimonial-header">
-                <img src="dist/images/profile.jpg" alt="profile">
+                <img src="dist/images/profile3.jpg" alt="profile">
                 <h3>Bak <br />Communications</h3>
               </div>
               <div class="testimonial-body">
@@ -94,6 +94,32 @@
               </div>
           </div>
         </div>
+      </div>
+  </section>
+
+
+  <!-- Contact -->
+
+  <section class="container-fluid contact">
+      <div class="row bg-darkgreen">
+        <div class="col-lg-6">
+            <img src="dist/images/bonding.jpg" alt="bonding">
+          </div>
+          <div class="col-lg-6">
+            <div class="richtext">
+                <h2 class="font-playfair-bold color-white">Reach Out</h2>
+                <ul>
+                  <li>Conference Secretariat</li>
+                  <li>163 Woodlands Place</li>
+                  <li>Algies Bay, Rodney 0920</li>
+                  <br />
+                  <li>123-456-7890</li>
+                  <li>hello@reallygreatsite.com</li>
+                  <li>@reallygreatsite</li>
+                </ul>
+                <button class="btn btn-primary custom-button">Enroll Now</button>
+            </div>
+          </div>
       </div>
   </section>
 

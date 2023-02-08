@@ -21,6 +21,10 @@ h6 {
   font-family: "Playfair Display", serif;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 // Nav
 
 .navbar {
@@ -28,8 +32,13 @@ h6 {
   width: 100%;
   top: 0;
   z-index: 2;
-  background-color: transparent;
+  background-color: $raisin-black;
+  opacity: 0.9;
   transition: all 0.3s ease-in-out;
+
+  @include breakpoint("desktop") {
+    background-color: transparent;
+  }
 
   .navbar-brand {
     font-size: 22px;
@@ -89,10 +98,19 @@ h6 {
     }
 
     h1 {
-      font-size: 60px;
+      font-size: 55px;
+      @include breakpoint("medium-device") {
+        font-size: 70px;
+      }
+      @include breakpoint("desktop") {
+        font-size: 60px;
+      }
     }
     p {
-      font-size: 18px;
+      font-size: 22px;
+      @include breakpoint("desktop") {
+        font-size: 18px;
+      }
     }
 
     h1,
@@ -115,13 +133,19 @@ h6 {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 40px;
+    text-align: center;
+    flex-direction: column;
+    @include breakpoint("desktop") {
+      text-align: left;
+      flex-direction: row;
+    }
 
     h2 {
       font-size: 40px;
-    }
-
-    p {
-      padding: 0 40px;
+      margin-bottom: 20px;
+      @include breakpoint("desktop") {
+        margin-bottom: 0;
+      }
     }
   }
   img {
@@ -133,22 +157,35 @@ h6 {
 
 // Sponsors
 
-.sponsors {
+.sponsors,
+.contact {
   .row {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    @include breakpoint("desktop") {
+      flex-direction: row;
+    }
 
     > div {
       padding: 0;
     }
   }
   .richtext {
-    padding: 0 40px;
+    padding: 40px;
     color: white;
+    text-align: center;
+    @include breakpoint("desktop") {
+      text-align: left;
+      padding: 0 40px;
+    }
     h2 {
       font-size: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      @include breakpoint("desktop") {
+        margin-bottom: 40px;
+      }
     }
   }
   img {
@@ -186,5 +223,27 @@ h6 {
         font-size: 14px;
       }
     }
+  }
+}
+
+.contact {
+  .row {
+    flex-direction: row-reverse;
+  }
+
+  .richtext {
+    padding: 40px;
+    @include breakpoint("desktop") {
+      padding: 0 0 0 115px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .custom-button {
+    @include yellow-btn;
+    margin-top: 20px;
   }
 }
