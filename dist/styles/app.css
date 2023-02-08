@@ -57,6 +57,21 @@ main {
   overflow-x: hidden;
 }
 
+.sub-pages .container-fluid {
+  padding: 0;
+}
+.sub-pages .container-fluid .inner-hero {
+  background-color: #222222;
+  overflow: hidden;
+}
+.sub-pages .container-fluid .inner-hero img {
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.9;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -293,4 +308,77 @@ main {
   font-size: 18px;
   color: #222222;
   margin-top: 20px;
+}
+
+.student-record {
+  margin-top: 40px;
+}
+.student-record table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+.student-record table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+.student-record table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+.student-record table th,
+.student-record table td {
+  padding: 0.625em;
+  text-align: center;
+}
+.student-record table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 600px) {
+  .student-record table {
+    border: 0;
+  }
+  .student-record table caption {
+    font-size: 1.3em;
+  }
+  .student-record table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .student-record table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+  .student-record table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+  .student-record table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .student-record table td:last-child {
+    border-bottom: 0;
+  }
 }/*# sourceMappingURL=app.css.map */
