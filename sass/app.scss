@@ -44,6 +44,15 @@ main {
   }
 }
 
+.custom-button {
+  @include yellow-btn;
+
+  &:hover,
+  &:active {
+    @include yellow-btn;
+  }
+}
+
 // Nav
 
 .navbar {
@@ -135,10 +144,6 @@ main {
     h1,
     p {
       text-shadow: 1px 1px 5px $raisin-black;
-    }
-
-    .custom-button {
-      @include yellow-btn;
     }
   }
 }
@@ -350,6 +355,47 @@ main {
 
     table td:last-child {
       border-bottom: 0;
+    }
+  }
+}
+
+// Login
+
+.signin {
+  .hero-banner {
+    height: 100vh;
+    width: 100%;
+    background: $raisin-black;
+    overflow: hidden;
+    position: relative;
+    img {
+      height: 100vh;
+      width: 100%;
+      opacity: 0.5;
+      object-fit: cover;
+    }
+    .form-overlay {
+      h1 {
+        text-shadow: 1px 1px 5px $raisin-black;
+      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+
+      .no-account {
+        font-size: 14px;
+        text-shadow: 1px 1px 5px $raisin-black;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      button {
+        width: 100%;
+      }
     }
   }
 }

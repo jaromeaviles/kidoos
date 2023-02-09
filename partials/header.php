@@ -2,6 +2,12 @@
 
 <?php
   require 'connections/config.php';
+
+  // Checks if logged in
+
+  if (!isset($_SESSION)) {
+    session_start();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -45,10 +51,18 @@
           <a class="nav-link color-white" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-white" href="students.php">Students</a>
+          <?php if (isset($_SESSION['access']) == 'admin') { ?>
+            <a class="nav-link color-white" href="students.php">Students</a>
+          <?php } else { ?>
+            <a class="nav-link color-white" href="#">Profile</a>
+          <?php } ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-white" href="#">Login</a>
+          <?php if (isset($_SESSION['username'])) { ?>
+          <a class="nav-link color-white" href="process/logout.php">Logout</a>
+          <?php } else { ?>
+            <a class="nav-link color-white" href="login.php">Login</a>
+          <?php } ?>
         </li>
         <li class="nav-item">
           <a class="nav-link color-white" href="#">Contact</a>
