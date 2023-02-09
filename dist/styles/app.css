@@ -72,6 +72,25 @@ main {
   opacity: 0.9;
 }
 
+.custom-button {
+  background-color: #ffba00 !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0;
+  border: 0;
+  font-size: 18px;
+  color: #222222 !important;
+}
+.custom-button:hover, .custom-button:active {
+  background-color: #ffba00 !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0;
+  border: 0;
+  font-size: 18px;
+  color: #222222 !important;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -167,15 +186,6 @@ main {
 .hero-banner-container .hero-text p {
   text-shadow: 1px 1px 5px #222222;
 }
-.hero-banner-container .hero-text .custom-button {
-  background-color: #ffba00;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 0;
-  border: 0;
-  font-size: 18px;
-  color: #222222;
-}
 
 .about .richtext {
   display: flex;
@@ -217,7 +227,7 @@ main {
 }
 @media (min-width: 992px) {
   .sponsors .row,
-.contact .row {
+  .contact .row {
     flex-direction: row;
   }
 }
@@ -233,7 +243,7 @@ main {
 }
 @media (min-width: 992px) {
   .sponsors .richtext,
-.contact .richtext {
+  .contact .richtext {
     text-align: left;
     padding: 0 40px;
   }
@@ -245,7 +255,7 @@ main {
 }
 @media (min-width: 992px) {
   .sponsors .richtext h2,
-.contact .richtext h2 {
+  .contact .richtext h2 {
     margin-bottom: 40px;
   }
 }
@@ -300,13 +310,13 @@ main {
   padding-left: 0;
 }
 .contact .custom-button {
-  background-color: #ffba00;
+  background-color: #ffba00 !important;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 0;
   border: 0;
   font-size: 18px;
-  color: #222222;
+  color: #222222 !important;
   margin-top: 20px;
 }
 
@@ -381,4 +391,39 @@ main {
   .student-record table td:last-child {
     border-bottom: 0;
   }
+}
+
+.signin .hero-banner {
+  height: 100vh;
+  width: 100%;
+  background: #222222;
+  overflow: hidden;
+  position: relative;
+}
+.signin .hero-banner img {
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.signin .hero-banner .form-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+}
+.signin .hero-banner .form-overlay h1 {
+  text-shadow: 1px 1px 5px #222222;
+}
+.signin .hero-banner .form-overlay .no-account {
+  font-size: 14px;
+  text-shadow: 1px 1px 5px #222222;
+}
+.signin .hero-banner .form-overlay .no-account a {
+  text-decoration: none;
+}
+.signin .hero-banner .form-overlay button {
+  width: 100%;
 }/*# sourceMappingURL=app.css.map */

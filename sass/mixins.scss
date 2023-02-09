@@ -2,13 +2,13 @@
 @import "helpers.scss";
 
 @mixin yellow-btn {
-  background-color: #ffba00;
+  background-color: #ffba00 !important;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 0;
   border: 0;
   font-size: 18px;
-  color: $raisin-black;
+  color: $raisin-black !important;
 }
 
 // breakpoints
