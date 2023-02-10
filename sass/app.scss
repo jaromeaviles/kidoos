@@ -393,6 +393,33 @@ main {
         }
       }
 
+      .error-no-input,
+      .error-invalid-format {
+        color: $raisin-black;
+        font-size: 14px;
+        background: $light-red;
+        padding: 0 18px 0 15px;
+        text-align: left;
+        display: none;
+        transition: all 0.3s ease-in;
+        margin-bottom: 0;
+
+        &.display-error {
+          display: inline-block;
+        }
+      }
+
+      .error-invalid-creds {
+        color: $raisin-black;
+        font-size: 14px;
+        background: $light-red;
+        padding: 0 18px 0 15px;
+        text-align: left;
+        transition: all 0.3s ease-in;
+        margin-bottom: 0;
+        display: inline-block;
+      }
+
       button {
         width: 100%;
       }
