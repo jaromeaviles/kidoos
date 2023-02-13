@@ -23,6 +23,8 @@
 
 <div class="container student-record">
    <div class="row">
+      <div class="col-12">
+            <a href="add-student.php" class="btn btn-primary custom-btn-green">Add new</a>
       <table>
          <thead>
             <tr>
@@ -43,6 +45,7 @@
             <?php } while($row = $results->fetch_assoc()); ?>
          </tbody>
       </table>
+      </div>
    </div>
 </div>
 </div>
