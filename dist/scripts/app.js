@@ -16,15 +16,6 @@ window.onload = () => {
     } else {
         navbar.classList.remove('on-scroll');
     }
-
-    // Checks if in login page
-
-    let main = document.querySelector('main');
-
-    if (main.classList.contains('signin')) {
-        let nav = document.querySelector('.navbar');
-        nav.style.visibility = 'hidden';
-    }
 }
 
 // Navigation Scrolling
@@ -44,29 +35,33 @@ window.onscroll = () => {
 let button = document.querySelector('.form-overlay button');
 let inputs = document.querySelectorAll('.form-overlay input');
 
-button.addEventListener('click', e => {
-    for (let input of inputs) {
-            let errorContainer = input.nextElementSibling;
-            let errors = errorContainer.querySelectorAll('p');
-            for (const error of errors) {
-            
-                if (input.value == '') {
-                if (error.classList.contains('error-no-input')) {
-                    error.classList.add('display-error');
+if (button) {
+    button.addEventListener('click', e => {
+        for (let input of inputs) {
+                let errorContainer = input.nextElementSibling;
+                let errors = errorContainer.querySelectorAll('p');
+                for (const error of errors) {
+                
+                    if (input.value == '') {
+                    if (error.classList.contains('error-no-input')) {
+                        error.classList.add('display-error');
+                    }
+                    e.preventDefault();
+                } else {
+                    error.classList.remove('display-error');
                 }
-                e.preventDefault();
-            } else {
-                error.classList.remove('display-error');
+            }
+    
+            // checks format
+            if (input.value) {
+                validateEmail();
+                validatePassword();
             }
         }
+    });
+}
 
-        // checks format
-        if (input.value) {
-            validateEmail();
-            validatePassword();
-        }
-    }
-});
+
 
 // on keyup
 for (const input of inputs) {

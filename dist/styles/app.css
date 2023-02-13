@@ -76,7 +76,7 @@ main {
   background-color: #ffba00 !important;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 0;
+  border-radius: 5px;
   border: 0;
   font-size: 18px;
   color: #222222 !important;
@@ -85,10 +85,29 @@ main {
   background-color: #ffba00 !important;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 0;
+  border-radius: 5px;
   border: 0;
   font-size: 18px;
   color: #222222 !important;
+}
+
+.custom-btn-green {
+  background-color: #0c3b2e !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  color: white !important;
+}
+.custom-btn-green:hover, .custom-btn-green:active {
+  background-color: #0c3b2e !important;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  color: white !important;
 }
 
 .navbar {
@@ -96,14 +115,9 @@ main {
   width: 100%;
   top: 0;
   z-index: 2;
-  background-color: #222222;
+  background-color: transparent;
   opacity: 0.9;
   transition: all 0.3s ease-in-out;
-}
-@media (min-width: 992px) {
-  .navbar {
-    background-color: transparent;
-  }
 }
 .navbar .navbar-brand {
   font-size: 22px;
@@ -313,7 +327,7 @@ main {
   background-color: #ffba00 !important;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 0;
+  border-radius: 5px;
   border: 0;
   font-size: 18px;
   color: #222222 !important;
@@ -322,6 +336,10 @@ main {
 
 .student-record {
   margin-top: 40px;
+  margin-bottom: 40px;
+}
+.student-record .custom-btn-green {
+  margin-bottom: 20px;
 }
 .student-record table {
   border: 1px solid #ccc;
@@ -451,4 +469,34 @@ main {
 }
 .signin .hero-banner .form-overlay button {
   width: 100%;
+}
+
+.add-student form {
+  padding: 40px 0;
+  width: 600px;
+  margin: 0 auto;
+}
+.add-student form button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+footer {
+  background-color: #222222;
+  color: white;
+  height: 35px;
+}
+footer p {
+  font-size: 14px;
+}
+footer .row div {
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+footer .row div p {
+  margin: 0;
+}
+footer .row div:last-child {
+  justify-content: flex-end;
 }/*# sourceMappingURL=app.css.map */

@@ -53,6 +53,14 @@ main {
   }
 }
 
+.custom-btn-green {
+  @include green-btn;
+  &:hover,
+  &:active {
+    @include green-btn;
+  }
+}
+
 // Nav
 
 .navbar {
@@ -60,13 +68,9 @@ main {
   width: 100%;
   top: 0;
   z-index: 2;
-  background-color: $raisin-black;
+  background-color: transparent;
   opacity: 0.9;
   transition: all 0.3s ease-in-out;
-
-  @include breakpoint("desktop") {
-    background-color: transparent;
-  }
 
   .navbar-brand {
     font-size: 22px;
@@ -276,6 +280,11 @@ main {
 
 .student-record {
   margin-top: 40px;
+  margin-bottom: 40px;
+
+  .custom-btn-green {
+    margin-bottom: 20px;
+  }
 
   table {
     border: 1px solid #ccc;
@@ -423,6 +432,48 @@ main {
       button {
         width: 100%;
       }
+    }
+  }
+}
+
+// Add Student
+
+.add-student {
+  form {
+    padding: 40px 0;
+    width: 600px;
+    margin: 0 auto;
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}
+
+// footer
+
+footer {
+  background-color: $raisin-black;
+  color: white;
+  height: 35px;
+
+  p {
+    font-size: 14px;
+  }
+
+  .row {
+    div {
+      display: flex;
+      align-items: center;
+      height: 35px;
+
+      p {
+        margin: 0;
+      }
+    }
+    div:last-child {
+      justify-content: flex-end;
     }
   }
 }
