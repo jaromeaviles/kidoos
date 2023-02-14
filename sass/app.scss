@@ -451,6 +451,33 @@ main {
   }
 }
 
+// Profile
+
+.profile {
+  padding: 40px 0;
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .img-cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
 // footer
 
 footer {

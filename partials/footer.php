@@ -3,10 +3,10 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <p>Copyright &copy; 2023 All Rights Reserved</p>
+                <p>Kiddos 2023</p>
             </div>
             <div class="col-6">
-                <p>Kiddos 2023</p>
+                <p>Copyright &copy; 2023 All Rights Reserved</p>
             </div>
         </div>
     </div>
