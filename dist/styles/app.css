@@ -481,6 +481,28 @@ main {
   width: 100%;
 }
 
+.profile {
+  padding: 40px 0;
+}
+.profile h1 {
+  font-size: 35px;
+}
+.profile .img-cont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.profile .img-cont img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+.profile .img-cont p {
+  text-align: center;
+}
+
 footer {
   background-color: #222222;
   color: white;

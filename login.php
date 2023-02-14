@@ -24,7 +24,7 @@ if ($registeredUser > 0) {
     echo header('location: index.php');
 
 } else {
-	echo header("location: login.php?msg=login-error");
+	echo header("location: login.php?msg=login_error");
 }
 
 }
@@ -45,7 +45,7 @@ if ($registeredUser > 0) {
 								<div class="errors">
 									<p class="error-no-input">Please input your email</p>
 									<p class="error-invalid-format">Email Invalid format</p>
-									<?php if (isset($_GET['msg']) && $_GET['msg'] == 'login-error') { ?>
+									<?php if (isset($_GET['msg']) && $_GET['msg'] == 'login_error') { ?>
 										<p class="error-invalid-creds">Email/Password Invalid</p>
 									<?php } ?>
 								</div>
