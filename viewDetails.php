@@ -35,13 +35,20 @@ require_once 'partials/header.php';
     <div class="row">
         <div class="col-lg-6 img-cont">
             <img src="https://picsum.photos/200" class="img-thumbnail" alt="Placeholder Image">
-            <p><strong>Student id:</strong> <?php echo $row['student_id']?></p>
         </div>
         <div class="col-lg-6">
-            <h1><?php echo $row['full_name']?> <?php echo $row['last_name']?></h1>
+            <h1 class="font-playfair-bold"><?php echo $row['full_name']?> <?php echo $row['last_name']?></h1>
             <p><?php echo $row['email']?></p>
             <p><?php echo $row['gender']?></p>
-            <p><?php echo $row['date_added']?></p>
+            <p>Last Update: <?php echo $row['date_added']?></p>
+            <div class="btn-container">
+                <a href="editDetails.php?edit=<?php echo $row['student_id']; ?>" class='btn btn-primary custom-button'>
+                    Edit</a>
+                <form action="process/delete.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $row['student_id']; ?>">
+                    <button class='btn btn-danger'>Delete</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

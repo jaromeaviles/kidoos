@@ -4,10 +4,6 @@
       session_start();
    }
 
-   if ($_SESSION['access'] == 'admin') {
-
-   
-
     require_once 'partials/header.php';
 
     $sql = 'SELECT * FROM students ORDER BY student_id DESC';
@@ -16,10 +12,7 @@
 
     $row = $results->fetch_assoc();
 
-   } else {
-      echo header('location: index.php');
-   }
-
+    $total = $results->num_rows;
 ?>
 
 <main class="sub-pages">
@@ -37,8 +30,11 @@
 
 <div class="container student-record">
    <div class="row">
-      <div class="col-12">
-            <a href="addStudent.php" class="btn btn-primary custom-btn-green">Add new</a>
+      <div class="col-12 body">
+            <a href="addStudent.php" class="btn btn-primary custom-button">Add new</a>
+      <!-- Checks if there is content -->
+      <?php if ($total > 0) { ?>
+
       <table>
          <thead>
             <tr>
@@ -46,7 +42,9 @@
                <th scope="col">Last Name</th>
                <th scope="col">Email</th>
                <th scope="col">Gender</th>
-               <th scope="col"></th>
+               <?php if (isset($_SESSION['access'])) { ?>
+                  <th scope="col"></th>
+               <?php } ?>
             </tr>
          </thead>
          <tbody>
@@ -56,11 +54,20 @@
                <td data-label="Last Name"><?php echo $row['last_name']; ?></td>
                <td data-label="Email"><?php echo $row['email']; ?></td>
                <td data-label="Gender"><?php echo $row['gender']; ?></td>
-               <td><a href="viewDetails.php?stud_id=<?php echo $row['student_id']; ?>">View</a></td>
+               <?php if (isset($_SESSION['access'])) { ?>
+                  <td><a href="viewDetails.php?stud_id=<?php echo $row['student_id']; ?>" class="btn btn-link">View</a></td>
+               <?php } ?>
             </tr>
             <?php } while($row = $results->fetch_assoc()); ?>
          </tbody>
       </table>
+      
+      <?php } else { ?>
+         <div class="no-record">
+            <h2>No Record Found.</h2>
+            <p>Let's try add one!</p>
+         </div>
+      <?php } ?>
       </div>
    </div>
 </div>

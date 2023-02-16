@@ -53,14 +53,6 @@ main {
   }
 }
 
-.custom-btn-green {
-  @include green-btn;
-  &:hover,
-  &:active {
-    @include green-btn;
-  }
-}
-
 // Nav
 
 .navbar {
@@ -282,7 +274,11 @@ main {
   margin-top: 40px;
   margin-bottom: 40px;
 
-  .custom-btn-green {
+  .body {
+    height: 50vh;
+  }
+
+  .custom-button {
     margin-bottom: 20px;
   }
 
@@ -366,6 +362,15 @@ main {
       border-bottom: 0;
     }
   }
+}
+
+// No Record
+
+.no-record {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 // Login
@@ -456,8 +461,13 @@ main {
 .profile {
   padding: 40px 0;
 
+  > .row {
+    align-items: center;
+  }
+
   h1 {
     font-size: 35px;
+    margin-bottom: 20px;
   }
 
   .img-cont {
@@ -471,9 +481,11 @@ main {
       object-fit: cover;
       margin: 0 auto;
     }
+  }
 
-    p {
-      text-align: center;
+  .btn-container {
+    form {
+      display: inline-block;
     }
   }
 }

@@ -22,7 +22,7 @@
 
   <!-- About -->
 
-  <section class="container about section-spacer">
+  <section class="container about section-spacer" id="about">
         <div class="row">
             <div class="col-lg-12">
               <div class="richtext">

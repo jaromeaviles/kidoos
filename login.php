@@ -55,7 +55,7 @@ if ($registeredUser > 0) {
 								<div class="errors">
 									<p class="error-no-input">Please input your password</p>
 									<p class="error-invalid-format">Password must contain min of 8 characters, at least one letter, one number and one special character</p>
-									<?php if (isset($_GET['msg']) && $_GET['msg'] == 'login-error') { ?>
+									<?php if (isset($_GET['msg']) && $_GET['msg'] == 'login_error') { ?>
 										<p class="error-invalid-creds">Email/Password Invalid</p>
 									<?php } ?>
 								</div>
