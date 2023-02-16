@@ -52,14 +52,10 @@
           <a class="nav-link color-white" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-white" href="#">About</a>
+          <a class="nav-link color-white" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <?php if (isset($_SESSION['access']) == 'admin') { ?>
             <a class="nav-link color-white" href="students.php">Students</a>
-          <?php } else { ?>
-            <a class="nav-link color-white" href="#">Profile</a>
-          <?php } ?>
         </li>
         <li class="nav-item">
           <?php if (isset($_SESSION['username'])) { ?>

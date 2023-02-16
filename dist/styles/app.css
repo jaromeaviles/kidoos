@@ -91,25 +91,6 @@ main {
   color: #222222 !important;
 }
 
-.custom-btn-green {
-  background-color: #0c3b2e !important;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-  border: 0;
-  font-size: 18px;
-  color: white !important;
-}
-.custom-btn-green:hover, .custom-btn-green:active {
-  background-color: #0c3b2e !important;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-  border: 0;
-  font-size: 18px;
-  color: white !important;
-}
-
 .navbar {
   position: fixed;
   width: 100%;
@@ -338,7 +319,10 @@ main {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.student-record .custom-btn-green {
+.student-record .body {
+  height: 50vh;
+}
+.student-record .custom-button {
   margin-bottom: 20px;
 }
 .student-record table {
@@ -409,6 +393,13 @@ main {
   .student-record table td:last-child {
     border-bottom: 0;
   }
+}
+
+.no-record {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .signin .hero-banner {
@@ -484,8 +475,12 @@ main {
 .profile {
   padding: 40px 0;
 }
+.profile > .row {
+  align-items: center;
+}
 .profile h1 {
   font-size: 35px;
+  margin-bottom: 20px;
 }
 .profile .img-cont {
   display: flex;
@@ -499,8 +494,8 @@ main {
      object-fit: cover;
   margin: 0 auto;
 }
-.profile .img-cont p {
-  text-align: center;
+.profile .btn-container form {
+  display: inline-block;
 }
 
 footer {
