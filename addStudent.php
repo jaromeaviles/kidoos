@@ -1,5 +1,10 @@
-<?php 
+<?php
+    //  Checks if logged in
+    if (!isset($_SESSION['access'])) {
+        echo header("location: index.php");
+    }
     require_once 'partials/header.php';
+    require 'partials/innerMenu.php';
 ?>
 
 <main class="sub-pages add-student">

@@ -60,9 +60,13 @@ main {
   width: 100%;
   top: 0;
   z-index: 2;
-  background-color: transparent;
-  opacity: 0.9;
+  background-color: $raisin-black;
   transition: all 0.3s ease-in-out;
+
+  @include breakpoint("desktop") {
+    background-color: transparent;
+    opacity: 0.9;
+  }
 
   .navbar-brand {
     font-size: 22px;
@@ -210,9 +214,13 @@ main {
   }
   img {
     width: 100%;
-    height: 600px;
+    height: auto;
     object-fit: cover;
-    object-position: right;
+    object-position: left;
+
+    @include breakpoint("desktop") {
+      height: 600px;
+    }
   }
 }
 
@@ -276,10 +284,6 @@ main {
 
   .body {
     height: 50vh;
-  }
-
-  .custom-button {
-    margin-bottom: 20px;
   }
 
   table {
@@ -371,6 +375,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 50vh;
 }
 
 // Login
@@ -495,7 +500,14 @@ main {
 footer {
   background-color: $raisin-black;
   color: white;
-  height: 35px;
+  height: auto;
+  padding: 10px 0;
+  text-align: center;
+
+  @include breakpoint("desktop") {
+    height: 35px;
+    padding: 0;
+  }
 
   p {
     font-size: 14px;
@@ -513,6 +525,25 @@ footer {
     }
     div:last-child {
       justify-content: flex-end;
+    }
+  }
+}
+
+// Search
+
+.record-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      margin-right: 15px;
     }
   }
 }
