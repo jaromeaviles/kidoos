@@ -1,4 +1,8 @@
-<?php 
+<?php
+    //  Checks if logged in
+    if (!isset($_SESSION['access'])) {
+        echo header("location: index.php");
+    }
     require_once 'partials/header.php';
 
     $studentId =  $_GET['edit'];
@@ -9,6 +13,8 @@
 
     $row = $result->fetch_assoc();
 ?>
+
+<?php require 'partials/innerMenu.php'; ?>
 
 <main class="sub-pages add-student">
 <div class="container-fluid">

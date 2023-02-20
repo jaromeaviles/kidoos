@@ -1,5 +1,6 @@
 <?php 
     require_once 'partials/header.php';
+    require 'partials/menu.php';
 ?>
 
 <main>
@@ -100,7 +101,7 @@
 
   <!-- Contact -->
 
-  <section class="container-fluid contact">
+  <section class="container-fluid contact" id="contact">
       <div class="row bg-darkgreen">
         <div class="col-lg-6">
             <img src="dist/images/bonding.jpg" alt="bonding">

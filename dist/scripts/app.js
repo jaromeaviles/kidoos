@@ -110,3 +110,14 @@ function validatePassword() {
         }
     }
 }
+
+// remove collapse when menu clicked
+
+let navItems = document.querySelectorAll('.navbar-nav .nav-item');
+
+for (const nav of navItems) {
+    nav.addEventListener('click', () => {
+        let toggler = document.querySelector('.navbar-collapse');
+        toggler.classList.remove('show');
+    });
+}

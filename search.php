@@ -4,9 +4,16 @@
       session_start();
    }
 
+   //  Checks if logged in
+   if (!isset($_SESSION['access'])) {
+        echo header("location: index.php");
+   }
+
     require_once 'partials/header.php';
 
-    $sql = 'SELECT * FROM students ORDER BY student_id DESC';
+    $search =  $_GET['search'];
+
+    $sql = "SELECT * FROM students WHERE full_name LIKE '%$search%'";
 
     $results = $conn->query($sql) or die($conn->error);
 
@@ -33,17 +40,15 @@
 <div class="container student-record">
    <div class="row">
       <div class="col-12 record-data">
-         <?php if (isset($_SESSION['access'])) { ?>
-         <div class="record-container">
+        <div class="record-container">
             <a href="addStudent.php" class="btn btn-primary custom-button">Add new</a>
             <form action="search.php" method="get">
                <input type="text" class="form-control" name="search" />
                <button class="btn btn-primary custom-button">Search</button>
             </form>
-         </div>
-         <?php } ?>
-           
-      <!-- Checks if there is content -->
+        </div>
+      
+        <!-- Checks if there is content -->
       <?php if ($total > 0) { ?>
 
       <table>
@@ -76,7 +81,6 @@
       <?php } else { ?>
          <div class="no-record">
             <h2>No Record Found.</h2>
-            <p>Let's try add one!</p>
          </div>
       <?php } ?>
       </div>
