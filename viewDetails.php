@@ -14,9 +14,9 @@ require_once 'partials/header.php';
   $studentId =  $_GET['stud_id'];
 
   $sql = "SELECT * FROM students WHERE student_id = $studentId";
-
+  
   $result = $conn->query($sql) or die($conn->error);
-
+  
   $row = $result->fetch_assoc();
 
 ?>

@@ -1,11 +1,11 @@
 <?php
-    //  Checks if logged in
-    if (!isset($_SESSION['access'])) {
-        echo header("location: index.php");
-    }
     require_once 'partials/header.php';
 
     $studentId =  $_GET['edit'];
+
+    if (!$studentId) {
+        echo header('location: index.php');
+    }
 
     $sql = "SELECT * FROM students WHERE student_id = $studentId";
 

@@ -66,10 +66,15 @@ main {
 }
 .sub-pages .container-fluid .inner-hero img {
   width: 100%;
-  height: 50vh;
+  height: 35vh;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.9;
+}
+@media (min-width: 992px) {
+  .sub-pages .container-fluid .inner-hero img {
+    height: 50vh;
+  }
 }
 
 .custom-button {
@@ -341,6 +346,21 @@ main {
   width: 100%;
   table-layout: fixed;
 }
+.student-record table .view-record {
+  color: #222222;
+  text-decoration: none;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .student-record table {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) {
+  .student-record table {
+    font-size: 16px;
+  }
+}
 .student-record table caption {
   font-size: 1.5em;
   margin: 0.5em 0 0.75em;
@@ -400,6 +420,7 @@ main {
   }
   .student-record table td:last-child {
     border-bottom: 0;
+    text-align: center;
   }
 }
 
@@ -473,8 +494,13 @@ main {
 
 .add-student form {
   padding: 40px 0;
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .add-student form {
+    width: 600px;
+  }
 }
 .add-student form button {
   margin-top: 20px;
@@ -482,7 +508,12 @@ main {
 }
 
 .profile {
-  padding: 40px 0;
+  padding: 15px;
+}
+@media (min-width: 992px) {
+  .profile {
+    padding: 40px 0;
+  }
 }
 .profile > .row {
   align-items: center;
@@ -490,6 +521,13 @@ main {
 .profile h1 {
   font-size: 35px;
   margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .profile h1 {
+    text-align: left;
+  }
 }
 .profile .img-cont {
   display: flex;
@@ -538,8 +576,22 @@ footer .row div:last-child {
 .record-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .record-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.record-container > .custom-button {
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .record-container > .custom-button {
+    margin-bottom: 0;
+  }
 }
 .record-container form {
   display: flex;

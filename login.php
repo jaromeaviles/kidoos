@@ -4,8 +4,8 @@ require_once 'partials/header-transparent.php';
 
 if (isset($_POST['login'])) {
 
-$email = $_POST['email'];
-$pass = $_POST['password'];
+$email = $conn->real_escape_string($_POST['email']);
+$pass = $conn->real_escape_string($_POST['password']);
 
 $sql = "SELECT * FROM access WHERE email = '$email' && password = '$pass'";
 

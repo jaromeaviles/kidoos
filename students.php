@@ -66,7 +66,7 @@
                <td data-label="Email"><?php echo $row['email']; ?></td>
                <td data-label="Gender"><?php echo $row['gender']; ?></td>
                <?php if (isset($_SESSION['access'])) { ?>
-                  <td><a href="viewDetails.php?stud_id=<?php echo $row['student_id']; ?>" class="btn btn-link">View</a></td>
+                  <td><a href="viewDetails.php?stud_id=<?php echo $row['student_id']; ?>" class="btn btn-link view-record">View</a></td>
                <?php } ?>
             </tr>
             <?php } while($row = $results->fetch_assoc()); ?>
