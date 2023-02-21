@@ -13,6 +13,10 @@
 
     $search =  $_GET['search'];
 
+    if (!$search) {
+      echo header("location: index.php");
+    }
+
     $sql = "SELECT * FROM students WHERE full_name LIKE '%$search%'";
 
     $results = $conn->query($sql) or die($conn->error);

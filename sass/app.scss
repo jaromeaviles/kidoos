@@ -36,9 +36,13 @@ main {
       overflow: hidden;
       img {
         width: 100%;
-        height: 50vh;
+        height: 35vh;
         object-fit: cover;
         opacity: 0.9;
+
+        @include breakpoint("desktop") {
+          height: 50vh;
+        }
       }
     }
   }
@@ -293,6 +297,19 @@ main {
     padding: 0;
     width: 100%;
     table-layout: fixed;
+
+    .view-record {
+      color: $raisin-black;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    @include breakpoint("medium-device") {
+      font-size: 14px;
+    }
+    @include breakpoint("desktop") {
+      font-size: 16px;
+    }
   }
 
   table caption {
@@ -364,6 +381,7 @@ main {
 
     table td:last-child {
       border-bottom: 0;
+      text-align: center;
     }
   }
 }
@@ -451,8 +469,12 @@ main {
 .add-student {
   form {
     padding: 40px 0;
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
+
+    @include breakpoint("desktop") {
+      width: 600px;
+    }
 
     button {
       margin-top: 20px;
@@ -464,7 +486,10 @@ main {
 // Profile
 
 .profile {
-  padding: 40px 0;
+  padding: 15px;
+  @include breakpoint("desktop") {
+    padding: 40px 0;
+  }
 
   > .row {
     align-items: center;
@@ -473,6 +498,11 @@ main {
   h1 {
     font-size: 35px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    @include breakpoint("desktop") {
+      text-align: left;
+    }
   }
 
   .img-cont {
@@ -534,8 +564,20 @@ footer {
 .record-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 20px;
+
+  @include breakpoint("desktop") {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  > .custom-button {
+    margin-bottom: 20px;
+    @include breakpoint("desktop") {
+      margin-bottom: 0;
+    }
+  }
 
   form {
     display: flex;
