@@ -22,6 +22,6 @@ $stmt->bind_param('sssssi', $fullName, $lastName, $email, $gender, $date, $id);
 
 $stmt->execute();
 
-echo header('location: ../viewDetails.php?stud_id=' . $id);
+header('location: ../view_details.php?stud_id=' . $id);
 
 ?>

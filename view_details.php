@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 
  //  Checks if logged in
  if (!isset($_SESSION['access'])) {
-    echo header("location: index.php");
+    header("location: index.php");
 }
 
 require_once 'partials/header.php';
@@ -17,11 +17,11 @@ require_once 'partials/header.php';
   
   $result = $conn->query($sql) or die($conn->error);
   
-  $row = $result->fetch_assoc();
+  $students = $result->fetch_all(MYSQLI_ASSOC);
 
 ?>
 
-<?php require 'partials/innerMenu.php'; ?>
+<?php require 'partials/innerNav.php'; ?>
 
 
 <main class="sub-pages">
@@ -41,18 +41,20 @@ require_once 'partials/header.php';
             <img src="https://picsum.photos/200" class="img-thumbnail" alt="Placeholder Image">
         </div>
         <div class="col-lg-6">
-            <h1 class="font-playfair-bold"><?php echo $row['full_name']?> <?php echo $row['last_name']?></h1>
-            <p><?php echo $row['email']?></p>
-            <p><?php echo $row['gender']?></p>
-            <p>Last Update: <?php echo $row['date_added']?></p>
+            <?php foreach($students as $student) : ?>
+            <h1 class="font-playfair-bold"><?= $student['full_name']?> <?= $student['last_name']?></h1>
+            <p><?= $student['email']?></p>
+            <p><?= $student['gender']?></p>
+            <p>Last Update: <?= $student['date_added']?></p>
             <div class="btn-container">
-                <a href="editDetails.php?edit=<?php echo $row['student_id']; ?>" class='btn btn-primary custom-button'>
+                <a href="edit_details.php?edit=<?= $student['student_id']; ?>" class='btn btn-primary custom-button'>
                     Edit</a>
                 <form action="process/delete.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $row['student_id']; ?>">
+                    <input type="hidden" name="id" value="<?= $student['student_id']; ?>">
                     <button class='btn btn-danger'>Delete</button>
                 </form>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

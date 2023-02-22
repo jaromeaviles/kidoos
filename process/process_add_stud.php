@@ -22,6 +22,6 @@
 
   $stmt->execute();
 
-  echo header('location: ../students.php');
+  header('location: ../students.php');
 
 ?>

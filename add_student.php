@@ -1,10 +1,10 @@
 <?php
     require_once 'partials/header.php';
-    require 'partials/innerMenu.php';
+    require 'partials/innerNav.php';
 
     //  Checks if logged in
     if (!isset($_SESSION['access'])) {
-        echo header("location: index.php");
+        header("location: index.php");
     }
 ?>
 
@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-12">
             
-        <form action="process/processAddStud.php" method="get">
+        <form action="process/process_add_stud.php" method="get">
         <div class="mb-3">
             <label for="fullName" class="form-label">Full Name</label>
             <input type="text" class="form-control" id="fullName" name="fullName">

@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'partials/header-transparent.php';
+require_once 'partials/header_transparent.php';
 
 if (isset($_POST['login'])) {
 
@@ -21,10 +21,10 @@ if ($registeredUser > 0) {
     $_SESSION['email'] = $row['email'];
     $_SESSION['access'] = $row['access'];
 
-    echo header('location: index.php');
+    header('location: index.php');
 
 } else {
-	echo header("location: login.php?msg=login_error");
+	header("location: login.php?msg=login_error");
 }
 
 }
