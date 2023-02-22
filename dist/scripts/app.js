@@ -127,12 +127,16 @@ for (const nav of navItems) {
 let searchForm = document.querySelector('.searchForm');
 let searchInput = document.querySelector('#searchInput');
 
-searchForm.addEventListener('submit', e => {
-    if (searchInput.value == '') {
-        searchInput.classList.add('highlight-error');
-        e.preventDefault();
-    }
-});
+if (searchForm) {
+    searchForm.addEventListener('submit', e => {
+        if (searchInput.value == '') {
+            searchInput.classList.add('highlight-error');
+            e.preventDefault();
+        }
+    });
+}
+
+
 
  // Auto adjust height depends on content
 

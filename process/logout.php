@@ -9,6 +9,6 @@ unset($_SESSION['username']);
 unset($_SESSION['email']);
 unset($_SESSION['access']);
 
-echo header('location: ../index.php');
+header('location: ../index.php');
 
 ?>

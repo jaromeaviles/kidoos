@@ -8,6 +8,6 @@ $sql = "DELETE FROM students WHERE student_id = $id";
 
 $conn->query($sql) or die($conn->error);
 
-echo header('location: ../students.php');
+header('location: ../students.php');
 
 ?>
