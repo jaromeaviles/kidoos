@@ -36,8 +36,8 @@
          <?php if (isset($_SESSION['access'])) { ?>
          <div class="record-container">
             <a href="addStudent.php" class="btn btn-primary custom-button">Add new</a>
-            <form action="search.php" method="get">
-               <input type="text" class="form-control" name="search" />
+            <form action="search.php" method="get" class="searchForm">
+               <input type="text" class="form-control" name="search" id="searchInput" />
                <button class="btn btn-primary custom-button">Search</button>
             </form>
          </div>
