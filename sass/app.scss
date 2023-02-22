@@ -285,6 +285,7 @@ main {
 .student-record {
   margin-top: 40px;
   margin-bottom: 40px;
+  height: 100%;
 
   .body {
     height: 50vh;
@@ -297,6 +298,7 @@ main {
     padding: 0;
     width: 100%;
     table-layout: fixed;
+    overflow-wrap: break-word;
 
     .view-record {
       color: $raisin-black;
@@ -534,6 +536,12 @@ footer {
   padding: 10px 0;
   text-align: center;
 
+  &.custom-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
   @include breakpoint("desktop") {
     height: 35px;
     padding: 0;
@@ -587,5 +595,11 @@ footer {
     input {
       margin-right: 15px;
     }
+  }
+
+  // Errors
+
+  .highlight-error {
+    border: 2px solid red;
   }
 }

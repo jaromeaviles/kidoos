@@ -334,6 +334,7 @@ main {
 .student-record {
   margin-top: 40px;
   margin-bottom: 40px;
+  height: 100%;
 }
 .student-record .body {
   height: 50vh;
@@ -345,6 +346,7 @@ main {
   padding: 0;
   width: 100%;
   table-layout: fixed;
+  overflow-wrap: break-word;
 }
 .student-record table .view-record {
   color: #222222;
@@ -552,6 +554,11 @@ footer {
   padding: 10px 0;
   text-align: center;
 }
+footer.custom-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 @media (min-width: 992px) {
   footer {
     height: 35px;
@@ -600,4 +607,7 @@ footer .row div:last-child {
 }
 .record-container form input {
   margin-right: 15px;
+}
+.record-container .highlight-error {
+  border: 2px solid red;
 }/*# sourceMappingURL=app.css.map */

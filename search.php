@@ -11,11 +11,7 @@
 
     require_once 'partials/header.php';
 
-    $search =  $_GET['search'];
-
-    if (!$search) {
-      echo header("location: index.php");
-    }
+    $search =  $conn->real_escape_string($_GET['search']);
 
     $sql = "SELECT * FROM students WHERE full_name LIKE '%$search%'";
 
@@ -46,8 +42,8 @@
       <div class="col-12 record-data">
         <div class="record-container">
             <a href="addStudent.php" class="btn btn-primary custom-button">Add new</a>
-            <form action="search.php" method="get">
-               <input type="text" class="form-control" name="search" />
+            <form action="search.php" method="get" class="searchForm">
+               <input type="text" class="form-control" name="search" id="searchInput" />
                <button class="btn btn-primary custom-button">Search</button>
             </form>
         </div>
@@ -75,7 +71,7 @@
                <td data-label="Email"><?php echo $row['email']; ?></td>
                <td data-label="Gender"><?php echo $row['gender']; ?></td>
                <?php if (isset($_SESSION['access'])) { ?>
-                  <td><a href="viewDetails.php?stud_id=<?php echo $row['student_id']; ?>" class="btn btn-link">View</a></td>
+                  <td><a href="viewDetails.php?stud_id=<?php echo $row['student_id']; ?>" class="btn btn-link view-record">View</a></td>
                <?php } ?>
             </tr>
             <?php } while($row = $results->fetch_assoc()); ?>

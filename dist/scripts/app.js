@@ -121,3 +121,24 @@ for (const nav of navItems) {
         toggler.classList.remove('show');
     });
 }
+
+// Search Validation
+
+let searchForm = document.querySelector('.searchForm');
+let searchInput = document.querySelector('#searchInput');
+
+searchForm.addEventListener('submit', e => {
+    if (searchInput.value == '') {
+        searchInput.classList.add('highlight-error');
+        e.preventDefault();
+    }
+});
+
+ // Auto adjust height depends on content
+
+ let rows = document.querySelectorAll('table tr');
+ let footer = document.querySelector('footer');
+
+ if (rows.length <= 4 && rows.length >= 1) {
+        footer.classList.add('custom-footer');
+    }
