@@ -96,6 +96,14 @@ main {
   color: #222222 !important;
 }
 
+.disabled-button {
+  background-color: #e0e0e0;
+}
+.disabled-button:hover {
+  cursor: default;
+  background-color: #e0e0e0;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -424,6 +432,14 @@ main {
     border-bottom: 0;
     text-align: center;
   }
+}
+.student-record .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.student-record .pagination .page-link {
+  color: #222222;
 }
 
 .no-record {

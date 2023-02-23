@@ -146,3 +146,26 @@ if (searchForm) {
  if (rows.length <= 4 && rows.length >= 1) {
         footer.classList.add('custom-footer');
     }
+
+// remove pagination if there is no record found
+
+let noRecord = document.querySelector('.no-record');
+let pagination = document.querySelector('.student-record nav');
+
+if (pagination) {
+    if (noRecord) {
+        pagination.style.display = 'none';
+    } else {
+        pagination.style.display = 'block';
+    }
+}
+
+// disabled buttons 
+
+disabledBtns = document.querySelectorAll('.disabled-button');
+
+for(const btn of disabledBtns) {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+    });
+}
