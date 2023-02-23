@@ -57,6 +57,16 @@ main {
   }
 }
 
+// disabled buttons
+
+.disabled-button {
+  background-color: $dark-gray;
+  &:hover {
+    cursor: default;
+    background-color: $dark-gray;
+  }
+}
+
 // Nav
 
 .navbar {
@@ -384,6 +394,17 @@ main {
     table td:last-child {
       border-bottom: 0;
       text-align: center;
+    }
+  }
+
+  // Pagination
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .page-link {
+      color: $raisin-black;
     }
   }
 }

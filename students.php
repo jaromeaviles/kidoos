@@ -6,13 +6,27 @@
 
     require_once 'partials/header.php';
 
-    $sql = 'SELECT * FROM students ORDER BY student_id DESC';
-
+    $limit = 10;
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+    $start = ($page - 1) * $limit;
+    $sql = "SELECT * FROM students LIMIT " . $start . " , " . $limit;
     $results = $conn->query($sql) or die($conn->error);
-
     $students = $results->fetch_all(MYSQLI_ASSOC);
 
     $total = $results->num_rows;
+
+   //  count students
+
+   $sqlCount = "SELECT count(student_id) AS id FROM students";
+   $results1 = $conn->query($sqlCount) or die($conn->error);
+   $studentCount = $results1->fetch_all(MYSQLI_ASSOC);
+   $totalStudents = $studentCount[0]['id'];
+
+   $pages = ceil($totalStudents / $limit);
+
+   $previous = $page - 1;
+   $next = $page + 1;
+
 ?>
 
 <?php require 'partials/innerNav.php'; ?>
@@ -81,6 +95,39 @@
       <?php } ?>
       </div>
    </div>
+
+   <!-- Pagination -->
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item">
+      <?php if ($page > 1) : ?>
+      <a class="page-link" href="<?= "students.php?page=$previous"; ?>" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+      <?php else : ?>
+      <a class="page-link disabled-button" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+      <?php endif; ?>
+    </li>
+    <?php for($i = 1; $i <= $pages; $i++) : ?>
+      <li class="page-item"><a class="page-link" href="<?= "students.php?page=$i"; ?>"><?= $i; ?></a></li>
+    <?php endfor; ?>
+    <li class="page-item">
+    <?php if ($page < $pages) : ?>
+      <a class="page-link" href="<?= "students.php?page=$next"; ?>" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+   <?php else : ?>
+      <a class="page-link disabled-button" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+   <?php endif; ?>
+    </li>
+  </ul>
+</nav>
+
 </div>
 </div>
 
