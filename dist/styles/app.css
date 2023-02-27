@@ -481,31 +481,6 @@ main {
 .signin .hero-banner .form-overlay .no-account a {
   text-decoration: none;
 }
-.signin .hero-banner .form-overlay .error-no-input,
-.signin .hero-banner .form-overlay .error-invalid-format {
-  color: #222222;
-  font-size: 14px;
-  background: rgba(255, 204, 204, 0.8);
-  padding: 0 18px 0 15px;
-  text-align: left;
-  display: none;
-  transition: all 0.3s ease-in;
-  margin-bottom: 0;
-}
-.signin .hero-banner .form-overlay .error-no-input.display-error,
-.signin .hero-banner .form-overlay .error-invalid-format.display-error {
-  display: inline-block;
-}
-.signin .hero-banner .form-overlay .error-invalid-creds {
-  color: #222222;
-  font-size: 14px;
-  background: rgba(255, 204, 204, 0.8);
-  padding: 0 18px 0 15px;
-  text-align: left;
-  transition: all 0.3s ease-in;
-  margin-bottom: 0;
-  display: inline-block;
-}
 .signin .hero-banner .form-overlay button {
   width: 100%;
 }
@@ -624,6 +599,18 @@ footer .row div:last-child {
 .record-container form input {
   margin-right: 15px;
 }
-.record-container .highlight-error {
-  border: 2px solid red;
+
+.login-error {
+  color: white;
+  background-color: #c51244;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: none;
+}
+.login-error p {
+  margin: 0;
+}
+.login-error.error-display {
+  display: block;
 }/*# sourceMappingURL=app.css.map */

@@ -9,11 +9,9 @@
         header("location: index.php");
    }
 
-    require_once 'partials/header.php';
+   require_once 'partials/header.php';
 
-    $search =  $conn->real_escape_string($_GET['search']);
-
-   //  $sql = "SELECT * FROM students WHERE full_name LIKE '%$search%'";
+   $search =  $conn->real_escape_string($_GET['search']);
 
     $limit = 10;
     $page = isset($_GET['page']) ? $_GET['page'] : 1;

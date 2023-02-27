@@ -453,33 +453,6 @@ main {
         }
       }
 
-      .error-no-input,
-      .error-invalid-format {
-        color: $raisin-black;
-        font-size: 14px;
-        background: $light-red;
-        padding: 0 18px 0 15px;
-        text-align: left;
-        display: none;
-        transition: all 0.3s ease-in;
-        margin-bottom: 0;
-
-        &.display-error {
-          display: inline-block;
-        }
-      }
-
-      .error-invalid-creds {
-        color: $raisin-black;
-        font-size: 14px;
-        background: $light-red;
-        padding: 0 18px 0 15px;
-        text-align: left;
-        transition: all 0.3s ease-in;
-        margin-bottom: 0;
-        display: inline-block;
-      }
-
       button {
         width: 100%;
       }
@@ -617,10 +590,25 @@ footer {
       margin-right: 15px;
     }
   }
+}
 
-  // Errors
+// errors
 
-  .highlight-error {
-    border: 2px solid red;
+// login errors
+
+.login-error {
+  color: white;
+  background-color: $light-red;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: none;
+
+  p {
+    margin: 0;
+  }
+
+  &.error-display {
+    display: block;
   }
 }
