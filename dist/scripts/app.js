@@ -1,8 +1,3 @@
-const regex = {
-    email: /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/,
-    pass: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
-}
-
 let navbar = document.querySelector('.navbar');
 
 // navigation onload
@@ -32,84 +27,41 @@ window.onscroll = () => {
 }
 
 // Login Form
-let button = document.querySelector('.form-overlay button');
-let inputs = document.querySelectorAll('.form-overlay input');
 
-if (button) {
-    button.addEventListener('click', e => {
-        for (let input of inputs) {
-                let errorContainer = input.nextElementSibling;
-                let errors = errorContainer.querySelectorAll('p');
-                for (const error of errors) {
-                
-                    if (input.value == '') {
-                    if (error.classList.contains('error-no-input')) {
-                        error.classList.add('display-error');
-                    }
-                    e.preventDefault();
-                } else {
-                    error.classList.remove('display-error');
-                }
-            }
-    
-            // checks format
-            if (input.value) {
-                validateEmail();
-                validatePassword();
-            }
-        }
-    });
+
+// check url if contains error
+
+window.onload = () => {
+    if (window.location.href.indexOf('login_error') > -1) {
+        let loginError = document.querySelector('.login-error');
+        loginError.classList.add('error-display');
+    }
 }
 
+loginForm = document.querySelector('.form-overlay form');
 
+if (loginForm) {
 
-// on keyup
-for (const input of inputs) {
-    input.addEventListener('keyup', () => {
-        const errorCont = input.nextElementSibling;
-        let errors = errorCont.querySelectorAll('p');
-
-        for (const error of errors) {
-            if (error.classList.contains('display-error')) {
-                error.classList.remove('display-error');
-            }
-
-            if (error.classList.contains('error-invalid-creds')) {
-                error.classList.add('d-none');
-            }
-        }
-    });
-}
-
-// Email validation
-function validateEmail() {
+loginForm.addEventListener('submit', e => {
+    let inputs = document.querySelectorAll('.form-overlay input');
     let email = document.querySelector('#email');
-    let errorContainer = email.nextElementSibling;
-    let error = errorContainer.querySelector('.error-invalid-format');
-    if (email.value) {
-        if (regex.email.test(email.value)) {
-            error.classList.remove('display-error');
-        } else {
-            error.classList.add('display-error');
-            event.preventDefault();
+
+    for (let input of inputs) {
+        if (input.value == '' || validateEmail(email) == false) {
+            let loginError = document.querySelector('.login-error');
+            loginError.classList.add('error-display');
+            e.preventDefault();
         }
+    }
+});
+
+    // Validate Email
+    function validateEmail(inputText) {
+        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return regex.test(inputText.value);
     }
 }
 
-// Password validation
-function validatePassword() {
-    let password = document.querySelector('#password');
-    let errorContainer = password.nextElementSibling;
-    let error = errorContainer.querySelector('.error-invalid-format');
-    if (password.value) {
-        if (regex.pass.test(password.value)) {
-            error.classList.remove('display-error');
-        } else {
-            error.classList.add('display-error');
-            event.preventDefault();
-        }
-    }
-}
 
 // remove collapse when menu clicked
 
