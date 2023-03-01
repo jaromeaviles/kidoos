@@ -460,7 +460,7 @@ main {
 .signin .hero-banner img {
   height: 100vh;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.6;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -601,16 +601,41 @@ footer .row div:last-child {
 }
 
 .login-error {
-  color: white;
-  background-color: #c51244;
+  background-color: #f8d7da;
   padding: 5px;
   font-size: 14px;
   margin-bottom: 15px;
+  opacity: 0.9;
   display: none;
 }
 .login-error p {
   margin: 0;
+  color: #721c24;
 }
-.login-error.error-display {
+.login-error.error-show {
+  display: block;
+}
+
+.form-error {
+  background-color: #f8d7da;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+.form-error p {
+  margin: 0;
+  color: #721c24;
+  font-size: 12px;
+}
+.form-error.show {
+  display: block;
+}
+.form-error .error-null,
+.form-error .error-email {
+  display: none;
+}
+.form-error .error-null.show,
+.form-error .error-email.show {
   display: block;
 }/*# sourceMappingURL=app.css.map */
