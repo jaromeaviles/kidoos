@@ -47,7 +47,7 @@ if ($registeredUser > 0) {
 						<?php endif; ?>
 
 						<h1 class="color-white font-playfair-bold">Kidoos</h1>
-						<form action="login.php" method="post">
+						<form id="login" action="login.php" method="post">
 							<div class="mb-3">
 								<input type="email" class="form-control" name="email" id="email" placeholder="Email" />
 							</div>

@@ -23,7 +23,11 @@
     <div class="row">
         <div class="col-12">
             
-        <form action="process/process_add_stud.php" method="get">
+        <form action="process/process_add_stud.php" method="get" id="add">
+        <div class="form-error">
+            <p class="error-null">*Text field must contain atleast 1 letter.</p>
+            <p class="error-email">*Email must be in a valid email format (e.g., email@gmail or email@yahoo.com).</p>
+        </div>
         <div class="mb-3">
             <label for="fullName" class="form-label">Full Name</label>
             <input type="text" class="form-control" id="fullName" name="fullName">
@@ -38,7 +42,7 @@
         </div>
         <div class="mb-3">
         <label for="gender" class="form-label">Gender</label>
-        <select class="form-select" name="gender">
+        <select class="form-select" name="gender" id="gender">
             <option>-- Select --</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
