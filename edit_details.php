@@ -31,7 +31,12 @@
     <div class="row">
         <div class="col-12">
             
-        <form action="process/update.php" method="post">
+        <form action="process/update.php" method="post" id="edit">
+        
+        <div class="form-error">
+            <p class="error-email">*Email must be in a valid email format (e.g., email@gmail or email@yahoo.com).</p>
+        </div>
+
         <?php foreach($students as $student) : ?>
         <div class="mb-3">
             <input type="hidden" class="form-control" id="id" name="id" value="<?= $student['student_id']?>">

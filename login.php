@@ -39,12 +39,11 @@ if ($registeredUser > 0) {
 					<img src="dist/images/class.jpg" alt="class" />
 					
 					<div class="form-overlay">
+						
 						<!-- Error -->
-						<?php if (isset($_GET['msg']) && $_GET['msg'] == 'login_error') : ?>
-							<div class="login-error">
-								<p>Email or Password invalid</p>
-							</div>
-						<?php endif; ?>
+						<div class="login-error">
+							<p>Email or Password invalid</p>
+						</div>
 
 						<h1 class="color-white font-playfair-bold">Kidoos</h1>
 						<form id="login" action="login.php" method="post">
