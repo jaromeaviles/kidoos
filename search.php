@@ -5,7 +5,7 @@
    }
 
    //  Checks if logged in
-   if (!isset($_SESSION['access'])) {
+   if (!isset($_SESSION['user_type'])) {
         header("location: index.php");
    }
 
@@ -63,7 +63,7 @@
         </div>
       
         <!-- Checks if there is content -->
-      <?php if ($total > 0) { ?>
+      <?php if ($total > 0) : ?>
 
       <table>
          <thead>
@@ -72,9 +72,9 @@
                <th scope="col">Last Name</th>
                <th scope="col">Email</th>
                <th scope="col">Gender</th>
-               <?php if (isset($_SESSION['access'])) { ?>
+               <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) : ?>
                   <th scope="col"></th>
-               <?php } ?>
+               <?php endif; ?>
             </tr>
          </thead>
          <tbody>
@@ -84,19 +84,19 @@
                <td data-label="Last Name"><?php echo $student['last_name']; ?></td>
                <td data-label="Email"><?php echo $student['email']; ?></td>
                <td data-label="Gender"><?php echo $student['gender']; ?></td>
-               <?php if (isset($_SESSION['access'])) { ?>
+               <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) : ?>
                   <td><a href="view_details.php?stud_id=<?php echo $student['student_id']; ?>" class="btn btn-link view-record">View</a></td>
-               <?php } ?>
+               <?php endif; ?>
             </tr>
             <?php endforeach; ?>
          </tbody>
       </table>
       
-      <?php } else { ?>
+      <?php else : ?>
          <div class="no-record">
             <h2>No Record Found.</h2>
          </div>
-      <?php } ?>
+      <?php endif; ?>
       </div>
    </div>
 

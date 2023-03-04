@@ -47,7 +47,7 @@
 <div class="container student-record">
    <div class="row">
       <div class="col-12 record-data">
-         <?php if (isset($_SESSION['access'])) { ?>
+         <?php if (isset($_SESSION['email'])) : ?>
          <div class="record-container">
             <a href="add_student.php" class="btn btn-primary custom-button">Add new</a>
             <form action="search.php" method="get" class="searchForm">
@@ -55,10 +55,10 @@
                <button class="btn btn-primary custom-button">Search</button>
             </form>
          </div>
-         <?php } ?>
+         <?php endif; ?>
            
       <!-- Checks if there is content -->
-      <?php if ($total > 0) { ?>
+      <?php if ($total > 0) : ?>
 
       <table>
          <thead>
@@ -67,7 +67,7 @@
                <th scope="col">Last Name</th>
                <th scope="col">Email</th>
                <th scope="col">Gender</th>
-               <?php if (isset($_SESSION['access'])) : ?>
+               <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) : ?>
                   <th scope="col"></th>
                <?php endif; ?>
             </tr>
@@ -79,7 +79,7 @@
                <td data-label="Last Name"><?= $student['last_name']; ?></td>
                <td data-label="Email"><?= $student['email']; ?></td>
                <td data-label="Gender"><?= $student['gender']; ?></td>
-               <?php if (isset($_SESSION['access'])) : ?>
+               <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) : ?>
                   <td><a href="view_details.php?stud_id=<?= $student['student_id']; ?>" class="btn btn-link view-record">View</a></td>
                <?php endif; ?>
             </tr>
@@ -87,12 +87,12 @@
          </tbody>
       </table>
       
-      <?php } else { ?>
+      <?php else : ?>
          <div class="no-record">
             <h2>No Record Found.</h2>
             <p>Let's try add one!</p>
          </div>
-      <?php } ?>
+      <?php endif; ?>
       </div>
    </div>
 

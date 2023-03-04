@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 }
 
  //  Checks if logged in
- if (!isset($_SESSION['access'])) {
+ if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) {
     header("location: index.php");
 }
 

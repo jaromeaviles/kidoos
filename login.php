@@ -7,7 +7,7 @@ if (isset($_POST['login'])) {
 $email = $conn->real_escape_string($_POST['email']);
 $pass = $conn->real_escape_string($_POST['password']);
 
-$sql = "SELECT * FROM access WHERE email = '$email' && password = '$pass'";
+$sql = "SELECT * FROM students WHERE email = '$email' && password = '$pass'";
 
 $result = $conn->query($sql) or die($conn->error);
 
@@ -19,7 +19,7 @@ if ($registeredUser > 0) {
     $_SESSION['id'] = $row['id'];
     $_SESSION['username'] = $row['username'];
     $_SESSION['email'] = $row['email'];
-    $_SESSION['access'] = $row['access'];
+    $_SESSION['user_type'] = $row['user_type'];
 
     header('location: index.php');
 
