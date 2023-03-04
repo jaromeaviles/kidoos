@@ -18,11 +18,11 @@
             <a class="nav-link color-white" href="students.php">Students</a>
         </li>
         <li class="nav-item">
-          <?php if (isset($_SESSION['username'])) { ?>
+          <?php if (isset($_SESSION['email'])) : ?>
           <a class="nav-link color-white" href="process/logout.php">Logout</a>
-          <?php } else { ?>
+          <?php else : ?>
             <a class="nav-link color-white" href="login.php">Login</a>
-          <?php } ?>
+          <?php endif; ?>
         </li>
         <li class="nav-item">
           <a class="nav-link color-white" href="#contact">Contact</a>
