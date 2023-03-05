@@ -55,7 +55,7 @@ if ($registeredUser > 0) {
                                 <label class="color-white no-account">Don't have an account? Click <a href="#" class="font-raleway-bold color-white">here</a></label>
 							</div>
                             
-							<button type="submit" class="btn btn-primary custom-button" name="login">login</button>
+							<button type="submit" class="btn btn-primary custom-button" name="login">Login</button>
 						</form>
 					</div>
 				</div>

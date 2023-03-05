@@ -15,7 +15,11 @@
           <a class="nav-link color-white" href="#about">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link color-white" href="students.php">Students</a>
+            <?php if (isset($_SESSION['email'])) : ?>
+              <a class="nav-link color-white" href="students.php">Students</a>
+            <?php else : ?>
+              <a class="nav-link color-white" href="login.php">Students</a>
+            <?php endif; ?>
         </li>
         <li class="nav-item">
           <?php if (isset($_SESSION['email'])) : ?>

@@ -5,8 +5,8 @@
    }
 
    //  Checks if logged in
-   if (!isset($_SESSION['user_type'])) {
-        header("location: index.php");
+   if (!isset($_SESSION['email'])) {
+      header("location: login.php");
    }
 
    require_once 'partials/header.php';
