@@ -4,7 +4,14 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+
+
  //  Checks if logged in
+
+ if (!isset($_SESSION['email'])) {
+    header('location: login.php');
+ }
+
  if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) {
     header("location: index.php");
 }

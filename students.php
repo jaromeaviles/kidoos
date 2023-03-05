@@ -4,6 +4,12 @@
       session_start();
    }
 
+   // checks if loggedin
+
+   if (!isset($_SESSION['email'])) {
+      header('location: login.php');
+   }
+
     require_once 'partials/header.php';
 
     $limit = 10;
