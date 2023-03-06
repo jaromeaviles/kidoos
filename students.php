@@ -53,9 +53,9 @@
 <div class="container student-record">
    <div class="row">
       <div class="col-12 record-data">
-         <?php if (isset($_SESSION['email'])) : ?>
+         <!-- Checks if user is admin -->
+      <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) : ?>
          <div class="record-container">
-            <a href="add_student.php" class="btn btn-primary custom-button">Add new</a>
             <form action="search.php" method="get" class="searchForm">
                <input type="text" class="form-control" name="search" id="searchInput" />
                <button class="btn btn-primary custom-button">Search</button>

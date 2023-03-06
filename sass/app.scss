@@ -565,14 +565,8 @@ footer {
 
 .record-container {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: flex-end;
   margin-bottom: 20px;
-
-  @include breakpoint("desktop") {
-    flex-direction: row;
-    align-items: center;
-  }
 
   > .custom-button {
     margin-bottom: 20px;
@@ -586,13 +580,17 @@ footer {
     justify-content: center;
     align-items: center;
 
+    @include breakpoint("mobile") {
+      width: 100%;
+    }
+
     input {
       margin-right: 15px;
     }
   }
 }
 
-// errors
+// Errors
 
 // login errors
 
@@ -632,7 +630,8 @@ footer {
   }
 
   .error-null,
-  .error-email {
+  .error-email,
+  .error-password-not-match {
     display: none;
 
     &.show {

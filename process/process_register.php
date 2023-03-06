@@ -11,17 +11,18 @@
   $lastName = $_GET['lastName'];
   $email = $_GET['email'];
   $gender = $_GET['gender'];
+  $password = $_GET['password'];
   date_default_timezone_set('asia/manila');
   $date = date('m/d/Y');
 
-  $sql = "INSERT INTO students (full_name, last_name, email, gender, date_added) VALUES (?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO students (full_name, last_name, email, gender, password, date_added) VALUES (?, ?, ?, ?, ?, ?)";
 
   $stmt = $conn->prepare($sql);
 
-  $stmt->bind_param('sssss', $fullName, $lastName, $email, $gender, $date);
+  $stmt->bind_param('ssssss', $fullName, $lastName, $email, $gender, $password, $date);
 
   $stmt->execute();
 
-  header('location: ../students.php');
+  header('location: ../login.php');
 
 ?>

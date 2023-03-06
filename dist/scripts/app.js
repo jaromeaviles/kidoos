@@ -162,9 +162,7 @@ if (addForm) {
       errorEmail.classList.add("show");
       countError++;
     } else {
-      if (countError == 0) {
-        errorEmail.classList.remove("show");
-      }
+      errorEmail.classList.remove("show");
     }
 
     // check gender
@@ -178,9 +176,24 @@ if (addForm) {
       countError - 1;
     }
 
+    // Validate passwords
+
+    let password = document.querySelector("#password");
+    let retypePassword = document.querySelector("#retypePassword");
+    let errorNotMatch = document.querySelector(".error-password-not-match");
+
+    if (password.value != retypePassword.value) {
+      errorNotMatch.classList.add("show");
+      countError++;
+    } else {
+      errorNotMatch.classList.remove("show");
+    }
+
     if (countError == 0) {
       hasError = false;
     }
+
+    console.log(countError);
 
     // show Error Panel
 

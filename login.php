@@ -52,7 +52,7 @@ if ($registeredUser > 0) {
 							</div>
 							<div class="mb-3">
 								<input type="password" class="form-control" name="password" id="password" placeholder="Password" />
-                                <label class="color-white no-account">Don't have an account? Click <a href="#" class="font-raleway-bold color-white">here</a></label>
+                                <label class="color-white no-account">Don't have an account? Click <a href="register.php" class="font-raleway-bold color-white">here</a></label>
 							</div>
                             
 							<button type="submit" class="btn btn-primary custom-button" name="login">Login</button>
