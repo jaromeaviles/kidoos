@@ -573,15 +573,8 @@ footer .row div:last-child {
 
 .record-container {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: flex-end;
   margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  .record-container {
-    flex-direction: row;
-    align-items: center;
-  }
 }
 .record-container > .custom-button {
   margin-bottom: 20px;
@@ -595,6 +588,11 @@ footer .row div:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 991px) {
+  .record-container form {
+    width: 100%;
+  }
 }
 .record-container form input {
   margin-right: 15px;
@@ -632,10 +630,12 @@ footer .row div:last-child {
   display: block;
 }
 .form-error .error-null,
-.form-error .error-email {
+.form-error .error-email,
+.form-error .error-password-not-match {
   display: none;
 }
 .form-error .error-null.show,
-.form-error .error-email.show {
+.form-error .error-email.show,
+.form-error .error-password-not-match.show {
   display: block;
 }/*# sourceMappingURL=app.css.map */

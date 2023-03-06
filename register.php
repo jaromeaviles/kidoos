@@ -1,11 +1,6 @@
 <?php
     require_once 'partials/header.php';
     require 'partials/innerNav.php';
-
-    //  Checks if logged in
-    if (!isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) {
-        header("location: index.php");
-    }
 ?>
 
 <main class="sub-pages add-student">
@@ -23,10 +18,11 @@
     <div class="row">
         <div class="col-12">
             
-        <form action="process/process_add_stud.php" method="get" id="add">
+        <form action="process/process_register.php" method="get" id="add">
         <div class="form-error">
-            <p class="error-null">*Text field must contain atleast 1 letter.</p>
+            <p class="error-null">*Text fields must contain atleast 1 letter.</p>
             <p class="error-email">*Email must be in a valid email format (e.g., email@gmail or email@yahoo.com).</p>
+            <p class="error-password-not-match">*Password and Retype Password not matched.</p>
         </div>
         <div class="mb-3">
             <label for="fullName" class="form-label">Full Name</label>
@@ -40,6 +36,7 @@
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" name="email">
         </div>
+
         <div class="mb-3">
         <label for="gender" class="form-label">Gender</label>
         <select class="form-select" name="gender" id="gender">
@@ -48,19 +45,25 @@
             <option value="Female">Female</option>
         </select>
         </div>
-            <button class="btn btn-primary custom-button">Add Student</button>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+
+        <div class="mb-3">
+            <label for="retype-password" class="form-label">Retype Password</label>
+            <input type="password" class="form-control" id="retypePassword" name="retype-password">
+        </div>
+            <button class="btn btn-primary custom-button">Register</button>
         </form>
         </div>
     </div>
 </div>
-
-
 </main>
 
 
 
 <?php
-
     require_once 'partials/footer.php';
-
 ?>

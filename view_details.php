@@ -52,7 +52,7 @@ require_once 'partials/header.php';
             <h1 class="font-playfair-bold"><?= $student['full_name']?> <?= $student['last_name']?></h1>
             <p><?= $student['email']?></p>
             <p><?= $student['gender']?></p>
-            <p>Last Update: <?= $student['date_added']?></p>
+            <p>Registration Date: <?= $student['date_added']?></p>
             <div class="btn-container">
                 <a href="edit_details.php?edit=<?= $student['student_id']; ?>" class='btn btn-primary custom-button'>
                     Edit</a>
