@@ -16,6 +16,9 @@ $row = $result->fetch_assoc();
 $registeredUser = $result->num_rows;
 
 if ($registeredUser > 0) {
+	
+	session_regenerate_id();
+
     $_SESSION['id'] = $row['id'];
     $_SESSION['username'] = $row['username'];
     $_SESSION['email'] = $row['email'];
