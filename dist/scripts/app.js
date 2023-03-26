@@ -193,8 +193,6 @@ if (addForm) {
       hasError = false;
     }
 
-    console.log(countError);
-
     // show Error Panel
 
     if (hasError) {

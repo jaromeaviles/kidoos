@@ -7,11 +7,12 @@
     session_start();
   }
 
-  $fullName = $_GET['fullName'];
-  $lastName = $_GET['lastName'];
-  $email = $_GET['email'];
-  $gender = $_GET['gender'];
-  $password = $_GET['password'];
+  $fullName = $_POST['fullName'];
+  $lastName = $_POST['lastName'];
+  $email = $_POST['email'];
+  $gender = $_POST['gender'];
+  $password = $_POST['password'];
+  $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
   date_default_timezone_set('asia/manila');
   $date = date('m/d/Y');
 
@@ -19,7 +20,7 @@
 
   $stmt = $conn->prepare($sql);
 
-  $stmt->bind_param('ssssss', $fullName, $lastName, $email, $gender, $password, $date);
+  $stmt->bind_param('ssssss', $fullName, $lastName, $email, $gender, $hashedPassword, $date);
 
   $stmt->execute();
 

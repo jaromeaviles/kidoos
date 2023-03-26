@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-12">
             
-        <form action="process/process_register.php" method="get" id="add">
+        <form action="process/process_register.php" method="post" id="add">
         <div class="form-error">
             <p class="error-null">*Text fields must contain atleast 1 letter.</p>
             <p class="error-email">*Email must be in a valid email format (e.g., email@gmail or email@yahoo.com).</p>
