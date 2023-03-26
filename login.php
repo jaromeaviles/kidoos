@@ -7,15 +7,13 @@ if (isset($_POST['login'])) {
 $email = $conn->real_escape_string($_POST['email']);
 $pass = $conn->real_escape_string($_POST['password']);
 
-$sql = "SELECT * FROM students WHERE email = '$email' && password = '$pass'";
+$sql = "SELECT * FROM students WHERE email = '$email'";
 
 $result = $conn->query($sql) or die($conn->error);
 
 $row = $result->fetch_assoc();
 
-$registeredUser = $result->num_rows;
-
-if ($registeredUser > 0) {
+if (password_verify($pass, $row['password'])) {
 	
 	session_regenerate_id();
 
@@ -27,7 +25,7 @@ if ($registeredUser > 0) {
     header('location: index.php');
 
 } else {
-	header("location: login.php?msg=login_error");
+	header("location: login.php?msg=login_error");					
 }
 
 }
