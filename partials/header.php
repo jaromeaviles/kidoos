@@ -1,13 +1,11 @@
-<!-- Connections -->
-
 <?php
-  require 'connections/config.php';
+require 'connections/config.php';
 
-  // Checks if logged in
+// Checks if logged in
 
-  if (!isset($_SESSION)) {
+if (!isset($_SESSION)) {
     session_start();
-  }
+}
 ?>
 
 <!DOCTYPE html>

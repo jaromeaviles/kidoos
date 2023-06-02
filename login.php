@@ -1,9 +1,11 @@
-<?php 
+<?php
 
-require_once 'partials/header_transparent.php';
+ob_start();
+
+require 'partials/header_transparent.php';
 
 if (isset($_POST['login'])) {
-
+    
 $email = $conn->real_escape_string($_POST['email']);
 $pass = $conn->real_escape_string($_POST['password']);
 
@@ -14,21 +16,20 @@ $result = $conn->query($sql) or die($conn->error);
 $row = $result->fetch_assoc();
 
 if (password_verify($pass, $row['password'])) {
-	
-	session_regenerate_id();
 
-    $_SESSION['id'] = $row['id'];
-    $_SESSION['username'] = $row['username'];
+    $_SESSION['id'] = $row['student_id'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['user_type'] = $row['user_type'];
 
     header('location: index.php');
 
 } else {
-	header("location: login.php?msg=login_error");					
+    header("location: login.php?msg=login_error");
 }
 
 }
+
+ob_end_flush();
 
 ?>
 
