@@ -1,0 +1,5 @@
+"student_id","full_name","last_name","email","password","gender","date_added","user_type"
+"63","Jarome Carlo","Aviles","admin@gmail.com","$2y$10$b36e7OQNSwJ49Hzung9v5eZWdT.QeKNR.DVp2Tq78knZE0mdV5W6K","Male","03/09/2023","1"
+"70","roland","lazarte","roland@gmail.com","$2y$10$aj1kpk9aNARqqLevSwV1XuBWwHGqeOhByo62bAtalgI24oMPM1Gji","Male","03/26/2023","2"
+"71","jarome","Aviles","jarome@gmail.com","$2y$10$A7.0qD2oHiluqCSkiJyvpegXzWhZOBIdBihDr0JBypgQYYfU/hfTK","Male","03/26/2023","2"
+"72","Jhun","Aviles","jhun@gmail.com","$2y$10$4PcAtSXXIjWcaLXebDPgIOPe5rbsNChu1YNCDRgDn38ImtbnhPVyS","Male","03/27/2023","2"
